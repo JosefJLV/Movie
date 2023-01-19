@@ -1,0 +1,38 @@
+#rd-navbar-collapse.rd-navbar-collapse
+	button.rd-navbar-collapse-close(data-multitoggle='#rd-navbar-collapse')
+		span.rd-navbar-collapse-toggle-element.active: span
+	h5.font-weight-sbold Address & Phone
+	p.ls-1.text-gray-500  9 Valley St. Brooklyn, NY 11203
+	p.ls-1: a.link-gray-500(href='tel:#') 1-800-346-6277
+	.divider.divider-small
+	h5.font-weight-sbold Latest Movies
+
+	// Swiper
+	.swiper-container.swiper-slider.swiper-slider-pyramid(
+		data-simulate-touch='false',
+		data-direction='horizontal',
+		data-slide-effect='coverflow'
+	)
+		.swiper-wrapper
+			.swiper-slide
+				+tour-minimal({
+					img: 'movie-3-img-02-258x273',
+					badge: 'New',
+					title: 'Disconnected',
+					caption: 'A falsis, mortem festus acipenser.'
+				})
+			.swiper-slide
+				+tour-minimal({
+					img: 'movie-3-img-03-258x273',
+					title: 'Paradigm Lost',
+					caption: 'Fidelis exsul foris tractares bromium est.'
+				})
+			.swiper-slide
+				+tour-minimal({
+					img: 'movie-3-img-04-258x273',
+					title: 'Black Mirror',
+					caption: 'Rusticus, salvus scutums nunquam talem de.'
+				})
+		//Swiper Pagination
+		.swiper-pagination
+	a.button.button-default-outline(href='categories.html') View All Movies

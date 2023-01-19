@@ -1,0 +1,75 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-card
+include ../components/_ui-box-4
+
+block variables
+	- var activeCategory = 'movies'
+	- var pageName = 'Movie Page'
+
+block page
+	// Page Header
+	+header-classic({
+		title: 'Movie Page',
+		bgImage: 'bg-image-2'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+		.group.group-sm.group-middle
+			a.button.button-sm.button-icon.button-icon-left.button-light(data-lightgallery='item' href='https://youtu.be/d5k9CILJivQ')
+				span.icon.mdi.mdi-play
+				| Watch Now
+
+
+	section.section.section-lg
+		.container
+			.row.row-30.flex-column-reverse.flex-lg-row
+				.col-lg-8
+					article.post-info.inset-1
+						h4.post-info-title Wild
+						.post-info-meta.bg-gray-100
+							ul.post-info-meta-list
+								li
+									span.icon.mdi.mdi-calendar-blank
+									span.small-text.font-weight-sbold Mar 21, 2021
+								li
+									span.icon.mdi.mdi-star-outline
+									span.small-text.font-weight-sbold IMDB: 5,8\10
+								li
+									span.icon.mdi.mdi-earth
+									span.small-text.font-weight-sbold USA
+						p Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut elementum turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor vitae augue. Fusce eget arcu et nibh dapibus maximus consectetur in est.
+						table.post-info-table
+							tr
+								td Сountry
+								td USA
+							tr
+								td Cast
+								td Leslie Alexander, Cameron Williamson, Brooklyn Simmons
+							tr
+								td Duration
+								td 1h 29m
+							tr
+								td Genre
+								td Drama, Biography
+
+						h3.mt-40.mt-md-50.mt-lg-50.mt-xl-80 Photos
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere metus et tortor pulvinar venenatis. Aliquam erat volutpat. Nam ultrices semper felis, at laoreet metus
+						.row.row-6.row-x-6(data-lightgallery='group')
+							.col-4
+								a.thumbnail-light(href='images/single-tour-1-original.jpg' data-lightgallery='item')
+									+img('single-tour-1-355x359').thumbnail-light-image
+							.col-4
+								a.thumbnail-light(href='images/single-tour-2-original.jpg' data-lightgallery='item')
+									+img('single-tour-2-355x359').thumbnail-light-image
+							.col-4
+								a.thumbnail-light(href='images/single-tour-3-original.jpg' data-lightgallery='item')
+									+img('single-tour-3-355x359').thumbnail-light-image
+
+				.col-lg-4.text-center.text-lg-start
+					.movie-page-imageg
+						+img('movie-page-image-375x491')
+
+
+	// Page Footer
+	include ../sections/_footer-modern

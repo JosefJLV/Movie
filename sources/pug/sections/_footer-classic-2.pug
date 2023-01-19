@@ -1,0 +1,76 @@
+footer.section.footer-classic.footer-classic-md
+  .footer-classic-main
+    .container: .footer-classic-layout.justify-content-sm-around.justify-content-md-between
+      .footer-classic-layout-item
+        +logo
+        .footer-classic-item-block.footer-classic-item-block-1
+          h5 10000+ Satisfied Customers
+          .owl-carousel-quote-light
+            // Owl Carousel
+            .owl-carousel(
+            data-items='1'
+            data-dots='false'
+            data-nav='false'
+            data-stage-padding='0'
+            data-loop='true'
+            data-margin='30'
+            data-nav-custom='#footer-owl-nav'
+            data-animation-in='fadeIn'
+            data-animation-out='fadeOut'
+            data-mouse-drag='false')
+              blockquote.quote-light.quote-light-sm
+                +svg-quote-mark.quote-light-mark
+                .quote-light-main
+                  .quote-light-text: q I wanted to thank you very much for planning the trip to France for my sister and me. It was amazing!
+                  cite.quote-light-cite Jane Smith
+              blockquote.quote-light.quote-light-sm
+                +svg-quote-mark.quote-light-mark
+                .quote-light-main
+                  .quote-light-text: q We had a marvelous time in our travels to Madagascar and Zimbabwe, we had just wonderful experiences.
+                  cite.quote-light-cite Peter McMillan
+              blockquote.quote-light.quote-light-sm
+                +svg-quote-mark.quote-light-mark
+                .quote-light-main
+                  .quote-light-text: q The trip you put together for us in Italy went splendid. Each touch point, each adventure, felt like you planned it.
+                  cite.quote-light-cite Kate Wilson
+            #footer-owl-nav.owl-nav
+              button.owl-arrow.owl-arrow-prev(aria-label='Prev'): +svg-prev
+              .owl-nav-divider
+              button.owl-arrow.owl-arrow-next(aria-label='Next'): +svg-next
+
+      .footer-classic-layout-item
+        h5.footer-classic-title.inset-3 Popular Tours
+        .footer-classic-item-block.footer-classic-item-block-3
+          ul.list-pricing
+            li: a(href='single-tour.html')
+              span.list-pricing-title Turkey
+              span $645
+            li: a(href='single-tour.html')
+              span.list-pricing-title Greece
+              span $345
+            li: a(href='single-tour.html')
+              span.list-pricing-title Italy
+              span $445
+            li: a(href='single-tour.html')
+              span.list-pricing-title France
+              span $745
+            li: a(href='single-tour.html')
+              span.list-pricing-title Croatia
+              span $345
+              
+      .footer-classic-layout-item
+        h5.footer-classic-title.inset-3 Get in Touch
+        .footer-classic-item-block
+          ul.list.list-1
+            li: a(href='#') Send a Message
+            li: a(href='contact-us.html') Contacts
+            li: a(href='#') Request a Callback
+          ul.list-inline.list-inline-md
+            li: a.link-2.icon.mdi.mdi-instagram(href='#')
+            li: a.link-2.icon.mdi.mdi-facebook(href='#')
+            li: a.link-2.icon.mdi.mdi-youtube-play(href='#')
+
+  .container.mt-0: .divider-2
+  .footer-classic-aside
+    .container
+      +rights

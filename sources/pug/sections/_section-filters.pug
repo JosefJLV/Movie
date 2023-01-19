@@ -1,0 +1,16 @@
+section.section.filters
+  button.filters-toggle.button(data-multitoggle='#filters' data-scope='.filters-toggle') Filter
+  
+  ul.filters-list#filters
+    li: a.active(href='#')
+      span.icon.mdi.mdi-information-outline
+      span Date
+    li: a(href='#')
+      span.icon.mdi.mdi-arrow-up 
+      span Price Low to High
+    li: a(href='#')
+      span.icon.mdi.mdi-arrow-down
+      span Price High to Low
+    li: a(href='#')
+      span.icon.mdi.mdi-border-color
+      span Name

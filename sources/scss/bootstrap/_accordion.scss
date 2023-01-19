@@ -1,0 +1,130 @@
+$accordion-corporate-color: $gray-700;
+$accordion-corporate-background: $white;
+$accordion-corporate-border: $gray-300;
+$accordion-corporate-content-color: $body-color;
+$accordion-corporate-arrow-color: $primary;
+$accordion-corporate-arrow-background: $primary;
+$accordion-corporate-header-padding: 27px 82px 27px 32px;
+$accordion-corporate-content-padding: 35px 44px 35px nth($accordion-corporate-header-padding, 4);
+
+//
+// Base styles
+//
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 27px 82px 27px 32px;
+  @include font-size($font-size-base);
+  color: $accordion-button-color;
+  text-align: left; // Reset button style
+  background-color: $accordion-button-bg;
+  border: 0;
+  @include border-radius(0);
+  overflow-anchor: none;
+  @include transition($accordion-transition);
+  
+  font-size: 18px;
+  font-weight: 500;
+  
+
+  &:not(.collapsed) {
+    background-color: #f5f5f5;
+    border: 1px solid #c4c4c4;
+
+    &::after {
+      font-family: 'Material Design Icons';
+      content: '\f504';
+    }
+  }
+
+  // Accordion icon
+  &::after {
+    flex-shrink: 0;
+    width: $accordion-icon-width;
+    height: $accordion-icon-width;
+    margin-left: auto;
+    font-family: 'Material Design Icons';
+    content: '\f465';
+    font-weight: $headings-font-weight;
+    font-size: 22px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color:  #ec2c36;
+  }
+
+  &:hover {
+    z-index: 2;
+  }
+
+  &:focus {
+    z-index: 3;
+    outline: 0;
+  }
+}
+
+.accordion-header {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  background-color: $accordion-bg;
+  border-bottom: $accordion-border-width solid $accordion-border-color;
+
+  &:first-of-type {
+    @include border-top-radius($accordion-border-radius);
+
+    .accordion-button {
+      @include border-top-radius($accordion-inner-border-radius);
+    }
+  }
+
+  &:not(:first-of-type) {
+    border-top: 0;
+  }
+
+  // Only set a border-radius on the last item if the accordion is collapsed
+  &:last-of-type {
+    @include border-bottom-radius($accordion-border-radius);
+
+    .accordion-button {
+      &.collapsed {
+        @include border-bottom-radius($accordion-inner-border-radius);
+      }
+    }
+
+    .accordion-collapse {
+      @include border-bottom-radius($accordion-border-radius);
+    }
+  }
+}
+
+.accordion-body {
+  padding: 35px 44px 35px 32px;
+}
+
+
+// Flush accordion items
+//
+// Remove borders and border-radius to keep accordion items edge-to-edge.
+
+.accordion-flush {
+  .accordion-collapse {
+    border-width: 0;
+  }
+
+  .accordion-item {
+    border-right: 0;
+    border-left: 0;
+    @include border-radius(0);
+
+    &:first-child { border-top: 0; }
+    &:last-child { border-bottom: 0; }
+
+    .accordion-button {
+      @include border-radius(0);
+    }
+  }
+}

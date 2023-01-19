@@ -1,0 +1,18 @@
+//- Counter
+    @param {object} obj
+    @param {number} obj.value
+    @param {string} [obj.title]
+    @param {string} [obj.postfix]
+    @param {number} [obj.duration]
+mixin counter( obj )
+    //Counter
+    .box-counter.counter-classic&attributes( attributes )
+        .box-counter-main.counter-classic-main
+            .box-classic-items
+                .counter( data-speed= obj.duration )= obj.value
+                if ( obj.postfix )
+                    .counter-postfix= obj.postfix
+
+        if ( obj.title )
+            .box-counter-divider
+            h5.box-counter-title.counter-classic-title= obj.title

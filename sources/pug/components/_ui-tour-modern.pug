@@ -1,0 +1,10 @@
+mixin tour-modern(obj)
+	article.tour-modern&attributes(attributes)
+		.tour-modern-media
+			a.tour-modern-figure(href=obj.link ? obj.link : 'movie-page.html'): +img(obj.img).tour-modern-image
+		.tour-modern-main
+			h5.tour-modern-title: a(href=obj.link ? obj.link : 'movie-page.html')=obj.title
+			.tour-modern-info= obj.genres
+			block
+
+

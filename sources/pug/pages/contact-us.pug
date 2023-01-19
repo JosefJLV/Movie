@@ -1,0 +1,43 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Contact Us'
+
+block page
+	// Page Header
+	+header-classic({
+		title: pageName,
+		bgImage: 'bg-image-1'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+
+	// Addresses
+	section.section.section-md.bg-gray-900.context-dark
+		.container
+			.row.row-30
+				.col-sm-6.col-lg-4
+					// Box 1
+					address.box-1
+						p.heading-5.box-1-title Address
+						p.box-1-address Opening hours: 9 am - 5 pm
+						p.box-1-tel.heading-5 9 Valley St. Brooklyn, NY 11203
+				.col-sm-6.col-lg-4
+					// Box 1
+					address.box-1
+						p.heading-5.box-1-title Phone
+						p.box-1-address Have a question? Feel free to call us!
+						p.box-1-tel.heading-5: a(href='tel:#') +1-212-201-6535
+				.col-sm-6.col-lg-4
+					// Box 1
+					address.box-1
+						p.heading-5.box-1-title E-mail
+						p.box-1-address Send your testimonials and complaints
+						p.box-1-tel.heading-5: a(href='mailto:#') info@demolink.org
+
+
+	include ../sections/_section-contact-form
+
+
+	// Page Footer
+	include ../sections/_footer-modern

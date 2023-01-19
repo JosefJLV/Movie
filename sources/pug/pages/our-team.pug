@@ -1,0 +1,93 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Our Team'
+
+block page
+	// Page Header
+	+header-classic({
+		title: pageName,
+		bgImage: 'bg-image-2'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+
+	// Addresses
+	section.section.section-lg.bg-gray-100
+		.container
+			.row.row-50.justify-content-center
+				.col-md-10.col-lg-7.col-xl-6
+					.row.row-30
+						.col-sm-6
+							// Profile Classic
+							article.profile-classic
+								+img('our-team-1-272x197').profile-classic-image
+								.profile-classic-main
+									p.profile-classic-position Founder, Owner
+									p.profile-classic-name.heading-5 Peter Jones
+									.profile-classic-unit
+										.icon.mdi.mdi-phone
+										a(href='tel:#') 1-800-36-677
+						.col-sm-6
+							// Profile Classic
+							article.profile-classic
+								+img('our-team-2-272x197').profile-classic-image
+								.profile-classic-main
+									p.profile-classic-position Content Manager
+									p.profile-classic-name.heading-5 Leslie Alexander
+									.profile-classic-unit
+										.icon.mdi.mdi-phone
+										a(href='tel:#') 1-800-36-677
+						.col-sm-6
+							// Profile Classic
+							article.profile-classic
+								+img('our-team-3-272x197').profile-classic-image
+								.profile-classic-main
+									p.profile-classic-position Web Designer
+									p.profile-classic-name.heading-5 Mark Williams
+									.profile-classic-unit
+										.icon.mdi.mdi-phone
+										a(href='tel:#') 1-800-36-677
+						.col-sm-6
+							// Profile Classic
+							article.profile-classic
+								+img('our-team-4-272x197').profile-classic-image
+								.profile-classic-main
+									p.profile-classic-position PR Manager
+									p.profile-classic-name.heading-5 Brooklyn Simmons
+									.profile-classic-unit
+										.icon.mdi.mdi-phone
+										a(href='tel:#') 1-800-36-677
+
+				.col-md-10.col-lg-5.col-xl-6
+					// Box 2
+					article.box-2: .box-2-inner
+						h4 Get in Touch
+						// RD Mailform
+						form.rd-form.rd-mailform.form-lg(
+						data-form-output='form-output-global'
+						data-form-type='contact'
+						method='post'
+						action='bat/rd-mailform.php')
+							.form-wrap.form-wrap-icon
+								input#contact-name.form-input(type='text' name='name' data-constraints='@Required')
+								label.form-label(for='contact-name') Full Name
+								.icon.form-icon.mdi.mdi-account-outline
+							.form-wrap.form-wrap-icon
+								input#contact-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+								label.form-label(for='contact-email') E-mail
+								.icon.form-icon.mdi.mdi-email-outline
+							.form-wrap.form-wrap-icon
+								input#contact-phone.form-input(type='text' name='phone' data-constraints='@PhoneNumber')
+								label.form-label(for='contact-phone') Phone
+								.icon.form-icon.mdi.mdi-phone
+							.form-wrap.form-wrap-icon
+								label.form-label(for='contact-message') Message
+								textarea#contact-message.form-input(name='message' data-constraints='@Required')
+								.icon.form-icon.mdi.mdi-message-outline
+							.form-wrap.form-wrap-button.text-center
+								button.button.button-lg.button-primary(type='submit') Send
+
+
+	// Page Footer
+	include ../sections/_footer-modern

@@ -1,0 +1,23 @@
+mixin tour-minimal(obj)
+	article.tour-minimal.context-dark: .tour-minimal-inner(style='background-image: url(images/' + obj.img + '.jpg);')
+		.tour-minimal-header
+			if(obj.badge)
+				.tour-minimal-badge new
+		.tour-minimal-main
+			h6.tour-minimal-title: a(href=obj.link ? obj.link : 'movie-page.html')=obj.title
+		if(obj.caption)
+			.tour-minimal-caption
+				p=obj.caption
+
+
+
+mixin tour-minimal-2(obj)
+	article.tour-minimal-2.context-dark: .tour-minimal-inner-2(style='background-image: url(images/' + obj.img + '.jpg);')
+		.tour-minimal-header-2
+			if(obj.badge)
+				.tour-minimal-badge-2 new
+		.tour-minimal-main-2
+			h6.tour-minimal-title-2: a(href=obj.link ? obj.link : 'movie-page.html')=obj.title
+		if(obj.caption)
+			.tour-minimal-caption-2
+				p=obj.caption

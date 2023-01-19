@@ -1,0 +1,206 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-navbar-modern
+include ../components/_ui-tour-3
+include ../components/_ui-destination-1
+include ../components/_ui-quote-classic
+include ../components/_boxes
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'Home'
+
+block page
+
+	//Header Main Classic
+	+navbar-modern
+
+	// FScreen
+	section.section.bg-custom-1.position-relative.context-dark
+		.swiper-container.swiper-slider.swiper-slider-1(data-loop='true' data-autoplay='50000' data-simulate-touch="false"  )
+			.swiper-wrapper
+
+				.swiper-slide
+					.swiper-slide-caption.main-section.text-center.text-md-start
+						.container
+							.row.row-40.flex-column-reverse.flex-md-row.justify-content.justify-content-lg-between
+								.col-md-6.col-lg-5.col-xl-6
+									ul.list-movie-info(data-caption-animate='fadeIn' data-caption-delay='50')
+										li USA
+										li Sep 30, 2021
+										li imdb: 5,3\10
+									h1.block-8(data-caption-animate='fadeInUp' data-caption-delay='100') The Nun
+									p.block-9(data-caption-animate='fadeInUp' data-caption-delay='250') A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania and confront a malevolent force.
+									.text-center.text-lg-start.button-custom-offset
+										a.button.button-custom(href='https://youtu.be/d5k9CILJivQ', data-lightgallery="item", data-caption-animate='fadeInUp', data-caption-delay='450')
+											span.icon.mdi.mdi-play
+											| Watch now
+
+								.col-md-6.col-lg-7.col-xl-5.onset-1
+									.slider-image.onset-left-2
+										+img('slider-image-01-422x522')
+										.slider-image-title
+											span Horror
+
+				.swiper-slide
+					.swiper-slide-caption.main-section.text-center.text-md-start
+						.container
+							.row.row-40.flex-column-reverse.flex-md-row.justify-content.justify-content-lg-between
+								.col-md-6.col-lg-5.col-xl-6
+									ul.list-movie-info(data-caption-animate='fadeIn' data-caption-delay='50')
+										li USA
+										li Sep 29, 2021
+										li imdb: 3,8\10
+									h1.block-8(data-caption-animate='fadeInUp' data-caption-delay='100') Escape Plan 2: Hades
+									p.block-9(data-caption-animate='fadeInUp' data-caption-delay='250') Years after he fought his way out of an inescapable prison, Ray Breslin has organized a new top-notch security force. But when his team member goes missing, Breslin returns to the hell he escaped from.
+									.text-center.text-lg-start.button-custom-offset
+										a.button.button-custom(href='https://youtu.be/d5k9CILJivQ', data-lightgallery="item", data-caption-animate='fadeInUp', data-caption-delay='450')
+											span.icon.mdi.mdi-play
+											| Watch now
+
+								.col-md-6.col-lg-7.col-xl-5.onset-1
+									.slider-image.onset-left-2
+										+img('slider-image-02-422x522')
+										.slider-image-title
+											span Action
+
+				.swiper-slide
+					.swiper-slide-caption.main-section.text-center.text-md-start
+						.container
+							.row.row-40.flex-column-reverse.flex-md-row.justify-content.justify-content-lg-between
+								.col-md-6.col-lg-5.col-xl-6
+									ul.list-movie-info(data-caption-animate='fadeIn' data-caption-delay='50')
+										li USA
+										li mar 29, 2021
+										li imdb: 7,5\10
+									h1.block-8(data-caption-animate='fadeInUp' data-caption-delay='100') Ready Player One
+									p.block-9(data-caption-animate='fadeInUp' data-caption-delay='250') When the creator of a virtual reality called the OASIS dies, he makes a posthumous challenge to all OASIS users to find his Easter Egg, which will give the finder his fortune and control of his world.
+									.text-center.text-lg-start.button-custom-offset
+										a.button.button-custom(href='https://youtu.be/d5k9CILJivQ', data-lightgallery="item", data-caption-animate='fadeInUp', data-caption-delay='450')
+											span.icon.mdi.mdi-play
+											| Watch now
+
+								.col-md-6.col-lg-7.col-xl-5.onset-1
+									.slider-image.onset-left-2
+										+img('slider-image-03-422x522')
+										.slider-image-title
+											span Sci-Fi
+
+			//Swiper Pagination
+			.swiper-pagination
+
+			//Swiper Navigation
+			.swiper-button-prev
+			.swiper-button-next
+
+		.figure-classic-pattern
+		.figure-classic-pattern.v-2
+		.figure-classic-pattern.v-3
+
+	include ../sections/_section-product-popular
+	include ../sections/_section-product-latest
+
+
+	//Popular Categories
+	section.section.section-lg.bg-gray-900.context-dark
+		.container
+			.row.row-50.flex-lg-row-reverse.align-items-center.justify-content-xl-between
+				.col-lg-4.col-xl-5.col-xxl-4
+					.block-7
+						h2.wow.fadeIn Popular #[br] Categories
+						p.text-2.block-10.mt-md-20.mt-xxl-35.wow.fadeIn(data-wow-delay='.025s') All content at Flixena is divided into several categories. It helps you to easily navigate between them and find what you like.
+						a.button.button-lg.button-primary.mt-md-20.mt-xxl-44.wow.fadeIn(href='categories.html' data-wow-delay='.05s') view all
+
+				.col-lg-8.col-xl-7
+					.row.row-30
+						.col-sm-6.wow.fadeIn
+							+destination-1({
+								img: 'destinations-1-363x260',
+								title: 'Dramas'
+							})
+						.col-sm-6.wow.fadeIn(data-wow-delay='.025s')
+							+destination-1({
+								img: 'destinations-2-363x260',
+								title: 'Cartoons'
+							})
+						.col-sm-6.wow.fadeIn(data-wow-delay='.025s')
+							+destination-1({
+								img: 'destinations-3-363x260',
+								title: 'Horror'
+							})
+						.col-sm-6.wow.fadeIn(data-wow-delay='.05s')
+							+destination-1({
+								img: 'destinations-4-363x260',
+								title: 'Sci-Fi & Fantasy'
+							})
+						.col-sm-6.d-none.d-lg-block
+						.col-sm-6.wow.fadeIn(data-wow-delay='.075s')
+							+destination-1({
+								img: 'destinations-5-363x260',
+								title: 'Comedy'
+							})
+
+
+	//Watch Anywhere
+	section.section.section-custom-2.bg-default
+		.container
+			.row.row-40.row-60.justify-content-between
+
+				.col-lg-5
+					h5.wow.fadeInUp(data-wow-delay='.025s') Download Our App
+					h2.style-title-2.wow.fadeInUp(data-wow-delay='.05s') Watch Anywhere
+					h6.text-gray-500.font-weight-regular.ls-2.wow.fadeInUp(data-wow-delay='.075s') Install Flixena app for your device and enjoy high-quality movies and TV shows anywhere.
+					.button-wrap.wow.fadeInUp(data-wow-delay='1s')
+						a(href='#'): +img('button-img-01-151x49.png')
+						a(href='#'): +img('button-img-02-153x49.png')
+
+				.col-lg-7.parallax-scene-js
+					.section-image-1
+						+img('section-image-1-546x33.png')
+						.section-image-decorative-1
+							.layer(data-depth="-.25")
+								.item
+						.section-image-decorative-2
+							.layer(data-depth="+.25")
+								.item
+
+
+	// News
+	section.section.section-lg.bg-gray-900.context-dark
+		.container
+			.text-center.wow.fadeIn(data-wow-delay='.020s')
+				h3.font-sec.font-weight-sbold News
+			.row.row-30.offset-top-1
+				.col-sm-6.col-lg-3.wow.fadeIn
+					// Post Creative
+					article.post-creative
+						a.post-creative-image(href=links.post style='background-image: url(images/home-2-8.jpg);')
+						.post-creative-main
+							p.post-creative-title: a(href=links.post) Top 10 Movies to Watch This Summer
+							time.post-creative-time(datetime='2021') September 12, 2021
+				.col-sm-6.col-lg-3.wow.fadeIn(data-wow-delay='.025s')
+					// Post Creative
+					article.post-creative
+						a.post-creative-image(href=links.post style='background-image: url(images/home-2-9.jpg);')
+						.post-creative-main
+							p.post-creative-title: a(href=links.post) TV Shows & Movies About Superheroes
+							time.post-creative-time(datetime='2021') September 13, 2021
+				.col-sm-6.col-lg-3.wow.fadeIn(data-wow-delay='.05s')
+					// Post Creative
+					article.post-creative
+						a.post-creative-image(href=links.post style='background-image: url(images/home-2-10.jpg);')
+						.post-creative-main
+							p.post-creative-title: a(href=links.post) Unknown  Locations from Popular Movies
+							time.post-creative-time(datetime='2021') September 14, 2021
+				.col-sm-6.col-lg-3.wow.fadeIn(data-wow-delay='.075s')
+					// Post Creative
+					article.post-creative
+						a.post-creative-image(href=links.post style='background-image: url(images/home-2-11.jpg);')
+						.post-creative-main
+							p.post-creative-title: a(href=links.post) Top 5 Popular Movie Stars to Watch for in 2021
+							time.post-creative-time(datetime='2021') September 15, 2021
+
+
+	// Page Footer
+	include ../sections/_footer-modern

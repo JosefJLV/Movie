@@ -1,0 +1,46 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Icon Lists'
+
+block page 
+	// Page Header
+	+header-classic({
+		title: pageName,
+		bgImage: 'bg-image-1'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+
+	include ../sections/_section-features
+
+	section.section.section-lg
+		.container
+			ul.list-group-2.row.row-50
+				li.col-sm-6.col-lg-4
+					article.lg-2-item
+						.lg-2-item-aside.bg-secondary
+							.icon.lg-2-item-icon.mdi.mdi-calendar-today
+							span.lg-2-item-counter
+						.lg-2-item-main
+							h4.lg-2-item-title Photos
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				li.col-sm-6.col-lg-4
+					article.lg-2-item
+						.lg-2-item-aside
+							.icon.lg-2-item-icon.mdi.mdi-calendar-today
+							span.lg-2-item-counter
+						.lg-2-item-main
+							h4.lg-2-item-title Reviews
+							p Neuter, flavum tabess de festus, bi-color advena.
+				li.col-sm-6.col-lg-4
+					article.lg-2-item
+						.lg-2-item-aside.bg-tertiary
+							.icon.lg-2-item-icon.mdi.mdi-calendar-today
+							span.lg-2-item-counter
+						.lg-2-item-main
+							h4.lg-2-item-title Trailers
+							p Cum detrius persuadere, omnes talem altus, fortis lumenes.
+
+	// Page Footer
+	include ../sections/_footer-modern

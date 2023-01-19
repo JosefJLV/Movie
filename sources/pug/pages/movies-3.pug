@@ -1,0 +1,92 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-tour-minimal
+
+block variables
+	- var activeCategory = 'movies'
+	- var pageName = 'Movies #3'
+
+block page
+	// Page Header
+	+header-classic({
+		title: 'Movies #3',
+		bgImage: 'bg-image-1'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+
+
+	section.section.section-lg.bg-default
+		.container
+			.row.row-30.mt-xl-60
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						img: 'movie-3-img-01-258x273',
+						title: 'Euphoria',
+						caption: 'Adiurator de talis buxum, magicae humani.'
+					})
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						badge: 'new',
+						img: 'movie-3-img-02-258x273',
+						title: 'Disconnected',
+						caption: 'Absolutios manducare, tanquam noster.'
+					})
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						img: 'movie-3-img-03-258x273',
+						title: 'Paradigm Lost',
+						caption: 'Cum lapsus cadunt, omnes seculaes examinare.'
+					})
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						img: 'movie-3-img-04-258x273',
+						title: 'Black Mirror',
+						caption: 'Cum candidatus assimilant, omnes cliniases.'
+					})
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						img: 'movie-3-img-05-258x273',
+						title: 'Wild',
+						caption: 'Brevis, festus nomens tandem consumere de.'
+					})
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						badge: 'new',
+						img: 'movie-3-img-06-258x273',
+						title: 'Stranger Things',
+						caption: 'Nobilis, grandis nomens velox demitto deepos.'
+					})
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						badge: 'new',
+						img: 'movie-3-img-07-258x273',
+						title: 'Extraction',
+						caption: 'Cum absolutio prarere, omnes fermiumes.'
+					})
+
+				.col-sm-6.col-lg-3
+					+tour-minimal({
+						img: 'movie-3-img-08-258x273',
+						title: 'Triple Frontier',
+						caption: 'Lotus, placidus burguss unus dignus de rusticus.'
+					})
+
+		nav.pagination-outer.text-center
+			ul.pagination
+				li.page-item.active: a.page-link(href='#') 1
+				li.page-item: a.page-link(href='#') 2
+				li.page-item: a.page-link(href='#') 3
+
+
+
+
+	// Page Footer
+	include ../sections/_footer-modern

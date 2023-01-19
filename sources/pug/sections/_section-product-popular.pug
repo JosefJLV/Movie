@@ -1,0 +1,38 @@
+//Popular Movies
+section.section.section-lg.bg-default
+  .container
+    .text-center.wow.fadeIn(data-wow-delay='100')
+      h2 Popular Movies
+      p Here are some of the most popular movies that our users & viewers enjoy.
+    .owl-carousel.owl-theme-1.wow.fadeIn( data-items='1', data-sm-items='2', data-md-items='3', data-lg-items='3', data-xl-items='3', data-xxl-items='3', data-margin='15px', data-xxl-margin='40px', data-nav='true', data-dots='false', data-autoplay='true', data-wow-delay='100' )
+      .item
+        +box-nina({
+          img: 'index-img-01-356x412',
+          title: 'Euphoria',
+          subtitle: '2021, Drama'
+        })
+      .item
+        +box-nina({
+          img: 'index-img-02-356x412',
+          title: 'Disconnected',
+          subtitle: '2021, Drama',
+          badge: 'new'
+        })
+      .item
+        +box-nina({
+          img: 'index-img-03-356x412',
+          title: 'Paradigm Lost',
+          subtitle: '2021, Documentary, Sport'
+        })
+      .item
+        +box-nina({
+          img: 'index-img-04-356x412',
+          title: 'Alita: Battle Angel',
+          subtitle: '2021, Action'
+        })
+      .item
+        +box-nina({
+          img: 'index-img-05-356x412',
+          title: 'Black Mirror',
+          subtitle: '2021, Sci-fi'
+        })

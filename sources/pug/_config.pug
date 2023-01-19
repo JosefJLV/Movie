@@ -1,0 +1,81 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,700,800%7CPoppins:600",
+		formCounter = 0,
+		debug = true,
+		activeCategory = '',
+		logo = {
+			default: 'logo-default-236x34.png',
+			inverse: 'logo-inverse-236x34.png',
+			name: 'Flixena'
+		},
+		links = {
+			post: 'blog-post.html',
+			getTemplate:'#get-template'
+		},
+		menu = [
+			{
+				title: 'Home',
+				category: 'home',
+				link: 'index.html'
+			},
+			{
+				title: 'Movies',
+				category: 'movies',
+				link: '#',
+				dropdown: [
+					{ title: 'Movies 1' },
+					{ title: 'Movies 2' },
+					{ title: 'Movies 3' },
+					{ title: 'Movie Page' }
+				]
+			},
+			{
+				title: 'Blog',
+				category: 'blog',
+				dropdown: [
+					{ title: 'Blog post' }
+				]
+			},
+			{
+				title: 'Pages',
+				category: 'pages',
+				link: '#',
+				megamenu: [
+					{
+						title: 'Elements',
+						list: [
+							[
+								{ title: 'Typography' },
+								{ title: 'Buttons' },
+								{ title: 'Forms' },
+								{ title: 'Grid System' }
+							],
+							[
+								{ title: 'Icon Lists' },
+								{ title: 'Tables' },
+								{ title: 'Counters & Accordions', link: 'counters-and-accordions.html' }
+							]
+						]
+					},
+					{
+						title: 'Pages',
+						list: [
+							[
+								{ title: 'Categories' },
+								{ title: 'About' },
+								{ title: 'Our Team' },
+								{ title: 'Contact Us' }
+							],
+							[
+								{ title: '404 Page' },
+								{ title: 'Coming Soon' },
+								{ title: 'Privacy policy' },
+								{ title: 'Search results' }
+							]
+						]
+					}
+				]
+			}
+		];

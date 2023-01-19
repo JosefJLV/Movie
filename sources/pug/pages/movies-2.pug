@@ -1,0 +1,66 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-tour-modern
+	
+block variables
+	- var activeCategory = 'movies'
+	- var pageName = 'Movies #2'
+
+block page
+	// Page Header
+	+header-classic({
+		title: 'Movies #2',
+		bgImage: 'bg-image-2'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+		
+
+	section.section.section-lg.bg-gray-100
+		.container
+			.row.row-50.flex-lg-row-reverse
+
+				.col-lg-4
+					h4 Movies by Genre
+					.box-right
+						include ../includes/_box-4
+
+				.col-lg-8
+					h4 Featured Movies
+					+tour-modern({
+						img: 'movies-2-img-01-210x264',
+						title: 'Euphoria',
+						genres: '2021, Drama'
+					})
+						p Nunquam gratia cedrium. Nuclear vexatum iacere de nobilis advena, captis contencio! Hercle, brodium nobilis!, teres imber! Castus, alter exsuls rare amor de mirabilis, rusticus pars.
+
+					+tour-modern({
+						img: 'movies-2-img-02-210x264',
+						title: 'Disconnected',
+						genres: '2021, Drama'
+					})
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium ullamcorper pharetra, facilisi at. Congue elementum magnis integer tincidunt. Non tristique congue amet, morbi.
+
+					+tour-modern({
+						img: 'movies-2-img-03-210x264',
+						title: 'Paradigm Lost',
+						genres: '2021, Documentary, Sport'
+					})
+						p Compaters resistere in antenna! Trabem diligenter ducunt ad bi-color torquis. Vae, azureus adiurator! Cum galatae peregrinationes, omnes advenaes locus fatalis, secundus.
+
+					+tour-modern({
+						img: 'movies-2-img-04-210x264',
+						title: 'Black Mirror',
+						genres: '2021, Sci-fi'
+					})
+						p Abactuss sunt calcarias de alter candidatus. Emeritis, salvus tuss interdum experientia de noster, altus palus Trabem diligenter ducunt ad Cum galatae peregrinationes, omnes.
+
+					nav.pagination-outer.text-center
+						ul.pagination
+							li.page-item.active: a.page-link(href='#') 1
+							li.page-item: a.page-link(href='#') 2
+							li.page-item: a.page-link(href='#') 3
+							
+
+	// Page Footer
+	include ../sections/_footer-modern

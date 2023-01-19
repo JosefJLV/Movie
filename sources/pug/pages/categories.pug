@@ -1,0 +1,62 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-destination-1
+
+
+block variables
+	- var activeCategory = 'categories'
+	- var pageName = 'Categories'
+
+block page
+	// Page Header
+	+header-classic({
+		title: 'Categories',
+		bgImage: 'bg-image-2'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+
+
+	section.section.section-lg.bg-gray-100
+		.container
+			.row.row-30
+
+				.col-6.col-sm-4
+					+destination-1({
+						img: 'destinations-1-363x260',
+						title: 'TV Shows'
+					})
+
+				.col-6.col-sm-4
+					+destination-1({
+						img: 'destinations-2-363x260',
+						title: 'Cartoons'
+					})
+
+				.col-6.col-sm-4
+					+destination-1({
+						img: 'destinations-3-363x260',
+						title: 'Horror'
+					})
+
+				.col-6.col-sm-4
+					+destination-1({
+						img: 'destinations-4-363x260',
+						title: 'Sci-Fi & Fantasy'
+					})
+
+				.col-6.col-sm-4
+					+destination-1({
+						img: 'destinations-5-363x260',
+						title: 'Comedy'
+					})
+
+				.col-6.col-sm-4
+					+destination-1({
+						img: 'destinations-6-363x260',
+						title: 'Drama'
+					})
+
+
+	// Page Footer
+	include ../sections/_footer-modern

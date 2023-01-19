@@ -1,0 +1,10 @@
+mixin box-nina(obj)
+	.box-nina
+		.box-nina-media: +img(obj.img)
+		.box-nina-text
+			h4: a.link-white(href='movie-page.html')=obj.title
+			.box-nina-info
+				span.icon.mdi.mdi-calendar-today
+				span=obj.subtitle
+		if(obj.badge)
+			.box-nina-badge new

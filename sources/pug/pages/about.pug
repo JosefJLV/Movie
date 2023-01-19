@@ -1,0 +1,98 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-quote-classic
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'About'
+
+block page 
+	// Page Header
+	+header-classic({
+		title: pageName,
+		bgImage: 'bg-image-2'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+		.group.group-sm.group-middle
+			a.button.button-sm.button-icon.button-icon-left.button-light(data-lightgallery='item' href='https://youtu.be/d5k9CILJivQ')
+				span.icon.mdi.mdi-play
+				| Watch Now
+
+	// Basic Info
+	section.section.section-lg.bg-default
+		.container
+			.row.row-50.justify-content-center.align-items-center
+				.col-md-10.col-lg-7
+					h4.block-1.lh-1  A Few Words About Flixena Streaming Service
+					.block-2.mt-20.mt-md-30.mt-lg-50
+						p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					a.button.button-lg.button-primary.mt-lg-40(href='#') Read More
+				.col-md-10.col-lg-5.parallax-scene-js
+					.section-image-1.v2
+						+img('section-image-1-546x33.png')
+						.section-image-decorative-1
+							.layer(data-depth="-.25")
+								.item
+						.section-image-decorative-2
+							.layer(data-depth="+.25")
+								.item
+
+	// Features
+	include ../sections/_section-features
+
+	// Our Team
+	section.section.bg-default
+		.range
+			.cell-lg-7.cell-xl-8.cell-xxl-9: .cell-inner.section-lg.text-center.text-sm-start
+				h4 Meet Our Team
+				p Duis aute irure dolor in reprehenderit in voluptate velit
+				// Owl Carousel
+				.owl-carousel.owl-1.mt-40.mt-lg-50(
+				data-items='1'
+				data-sm-items='2'
+				data-md-items='3'
+				data-lg-items='2'
+				data-xl-items='3'
+				data-dots='true'
+				data-nav='false'
+				data-stage-padding='0'
+				data-loop='false'
+				data-margin='30'
+				data-mouse-drag='false')
+					// Profile Classic
+					article.profile-classic
+						+img('our-team-1-272x197').profile-classic-image
+						.profile-classic-main
+							p.profile-classic-position Founder, Owner
+							p.profile-classic-name.heading-5 Peter Jones
+							.profile-classic-unit
+								.icon.mdi.mdi-phone
+								a(href='tel:#') 1-800-36-677
+					// Profile Classic
+					article.profile-classic
+						+img('our-team-2-272x197').profile-classic-image
+						.profile-classic-main
+							p.profile-classic-position Content Manager
+							p.profile-classic-name.heading-5 Leslie Alexander
+							.profile-classic-unit
+								.icon.mdi.mdi-phone
+								a(href='tel:#') 1-800-36-677
+					// Profile Classic
+					article.profile-classic
+						+img('our-team-3-272x197').profile-classic-image
+						.profile-classic-main
+							p.profile-classic-position Web Designer
+							p.profile-classic-name.heading-5 Mark Williams
+							.profile-classic-unit
+								.icon.mdi.mdi-phone
+								a(href='tel:#') 1-800-36-677
+
+			.cell-lg-5.cell-xl-4.cell-xxl-3.height-fill
+				.box-3.bg-image(style='background-image: url(images/about-2.jpg);')
+					a.box-3-play(data-lightgallery='item' href='https://youtu.be/d5k9CILJivQ'): span.icon.mdi.mdi-play
+
+
+	// Page Footer
+	include ../sections/_footer-modern

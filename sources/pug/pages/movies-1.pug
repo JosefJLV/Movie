@@ -1,0 +1,22 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_boxes
+
+block variables
+	- var activeCategory = 'movies'
+	- var pageName = 'Movies #1'
+
+block page
+	// Page Header
+	+header-classic({
+		title: 'Movies #1',
+		bgImage: 'bg-image-1'
+	})
+		p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit.
+
+	include ../sections/_section-product-popular
+	include ../sections/_section-product-latest
+
+	// Page Footer
+	include ../sections/_footer-modern
